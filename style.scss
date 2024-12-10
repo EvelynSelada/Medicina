@@ -1,0 +1,93 @@
+$primer-color: #007BFF;
+$segundo-color: #f8f9fa;
+$font-family: 'Arial, sans-serif';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $segundo-color;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background: $primer-color;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+}
+
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+
+    .search {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        input {
+            flex: 1;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background: $primer-color;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background: darken($primer-color, 10%);
+            }
+        }
+    }
+
+    .results {
+        margin-top: 2rem;
+
+        .medicine-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+
+            h3 {
+                color: $primer-color;
+            }
+
+            p {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    font-size: 0.9rem;
+}
